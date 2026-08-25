@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Jovem - Cultura e Entretenimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+ 
+    <!-- CABEÇALHO / NAVBAR -->
+    <header>
+        <div class="top-bar">
+            <div class="container flex-between">
+                <span class="date" id="current-date">Terça-feira, 11 de Agosto de 2026</span>
+                <div class="top-right-actions">
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Botão de Acesso à Intranet -->
+                    <button id="intranet-access-btn" class="intranet-top-btn"><i class="fas fa-lock"></i> Área do Funcionário</button>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container flex-between">
+                <div class="logo">
+                    <h1>CONEXÃO<span>JOVEM</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-btn active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-btn" data-page="musica">Música</a></li>
+                    <li><a href="#" class="nav-btn" data-page="series">Séries & Filmes</a></li>
+                    <li><a href="#" class="nav-btn" data-page="cultura">Cultura Pop</a></li>
+                    <li><a href="#" class="nav-btn" data-page="games">Games</a></li>
+                    <li><a href="#" class="nav-btn" data-page="moda">Moda</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="O que você procura?">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+       
+        <!-- DESTAQUE PRINCIPAL -->
+        <section class="hero-section">
+            <div class="hero-main news-trigger" data-id="1">
+                <div class="badge">URGENTE • MÚSICA</div>
+                <h2>O Fenômeno do Trap Nacional que está Conquistando os Palcos Internacionais</h2>
+                <p>Descubra como os novos artistas estão redefinindo a sonoridade urbana e levando a cultura brasileira para festivais globais.</p>
+                <span class="author">Por Redação Conexão Jovem • Há 15 minutos</span>
+            </div>
+            <div class="hero-sidebar">
+                <div class="side-news news-trigger" data-id="2">
+                    <span class="badge-sm blue">SÉRIES</span>
+                    <h4>A 4ª temporada de Stranger Things deixou um legado? O que esperar do novo spin-off</h4>
+                </div>
+                <div class="side-news news-trigger" data-id="3">
+                    <span class="badge-sm pink">GAMES</span>
+                    <h4>GTA VI: Vazamentos indicam novas mecânicas focadas em redes sociais no jogo</h4>
+                </div>
+                <div class="side-news news-trigger" data-id="4">
+                    <span class="badge-sm orange">CULTURA POP</span>
+                    <h4>Aesthetics de 2014 estão de volta? Entenda a nostalgia da Geração Z</h4>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO DE CARDS / NOTÍCIAS RECENTES -->
+        <section class="news-grid-section">
+            <h3 class="section-title">Últimas do Rolê</h3>
+            <div class="grid">
+                <article class="news-card news-trigger" data-id="5">
+                    <div class="card-img" style="background: linear-gradient(45deg, #ff9f5a, #f94b76);">
+                        <i class="fas fa-headphones-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-sm">MÚSICA</span>
+                        <h4>Festivais de Verão: Line-ups confirmados surpreendem o público jovem</h4>
+                        <p>Prepare o glitter e o look: os maiores eventos de 2026 prometem experiências imersivas.</p>
+                    </div>
+                </article>
+
+
+                <article class="news-card news-trigger" data-id="6">
+                    <div class="card-img" style="background: linear-gradient(45deg, #1d7dbc, #ffca76);">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-sm blue">CINEMA</span>
+                        <h4>Os filmes independentes que todo jovem deveria assistir este ano</h4>
+                        <p>Saiba quais produções fora do eixo Hollywood estão dominando as conversas no Letterboxd.</p>
+                    </div>
+                </article>
+
+
+                <article class="news-card news-trigger" data-id="7">
+                    <div class="card-img" style="background: linear-gradient(45deg, #f94b76, #ff9f5a);">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-sm pink">MODA & ARTE</span>
+                        <h4>Streetwear sustentável: marcas locais ganham espaço no guarda-roupa Z</h4>
+                        <p>Como o consumo consciente se tornou a principal bandeira fashion da nova geração.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- MODAL GERAL (Notícias e Páginas Institucionais) -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+
+    <!-- MODAL DA INTRANET (Área do Funcionário) -->
+    <!-- MODAL DA INTRANET (Área do Funcionário com Login e Conteúdo Sensível) -->
+<div id="intranet-modal" class="modal">
+    <div class="modal-content intranet-box">
+        <span class="close-intranet">&times;</span>
+       
+        <!-- TELA DE LOGIN DA INTRANET -->
+        <div id="intranet-login-view">
+            <h2><i class="fas fa-lock"></i> Intranet Conexão Jovem</h2>
+            <p>Área restrita aos colaboradores. Insira suas credenciais corporativas:</p>
+            <form id="intranet-login-form" class="login-form">
+                <div class="input-group">
+                    <label for="employee-email"><i class="fas fa-envelope"></i> E-mail Corporativo</label>
+                    <input type="email" id="employee-email" placeholder="seu.nome@conexaojovem.com.br" required>
+                </div>
+                <div class="input-group">
+                    <label for="employee-pass"><i class="fas fa-key"></i> Senha</label>
+                    <input type="password" id="employee-pass" placeholder="••••••••" required>
+                </div>
+                <div class="input-group">
+                    <label for="employee-sector"><i class="fas fa-briefcase"></i> Selecione seu Setor</label>
+                    <select id="employee-sector" required>
+                        <option value="" disabled selected>Escolha seu departamento...</option>
+                        <option value="ti">TI (Tecnologia & Sistemas)</option>
+                        <option value="rh">RH (Recursos Humanos)</option>
+                        <option value="gestao">Gestão & Diretoria</option>
+                        <option value="marketing">Marketing & Growth</option>
+                        <option value="producao">Produção & Redação</option>
+                    </select>
+                </div>
+                <button type="submit" class="login-submit-btn">Acessar Sistema</button>
+                <span id="login-error" class="login-error hidden">Credenciais inválidas. Tente novamente.</span>
+            </form>
+        </div>
+
+
+        <!-- PAINEL RESTRITO E PERSONALIZADO POR SETOR -->
+        <div id="intranet-dashboard-view" class="hidden">
+            <div class="dashboard-header">
+                <div>
+                    <h2><i class="fas fa-building"></i> Painel Interno - <span id="user-sector-title">Setor</span></h2>
+                    <p class="welcome-msg">Bem-vindo(a), <span id="user-email-display"></span> | <span class="badge-sm orange">Nível de Acesso: Confidencial</span></p>
+                </div>
+                <button id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</button>
+            </div>
+
+
+            <!-- Informações Úteis e Rotina da Empresa -->
+            <div class="company-routine-box">
+                <h4><i class="fas fa-info-circle"></i> Mural de Avisos & Rotina da Empresa</h4>
+                <ul>
+                    <li>📅 **Reunião Geral (All-Hands):** Sexta-feira, às 10h00 via plataforma interna.</li>
+                    <li>☕ **Café com a Diretoria:** Toda última quinta-feira do mês no espaço convivência.</li>
+                    <li>🛡️ **Política de Segurança de Dados:** Não compartilhe senhas ou links de rascunho externo.</li>
+                </ul>
+            </div>
+
+
+            <!-- Dashboard Dinâmico Injetado via JS -->
+            <div id="sector-dashboard-content" class="sector-dashboard">
+                <!-- Conteúdo sensível e específico carregado aqui -->
+            </div>
+        </div>
+
+
+    </div>
+</div>>
+    </div>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2 class = "marca">CONEXÃO<span>JOVEM</span></h2>
+                <p>O portal de notícias e cultura feito por e para a juventude.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Categorias</h4>
+                <ul>
+                    <li><a href="#" class="nav-btn" data-page="musica">Música</a></li>
+                    <li><a href="#" class="nav-btn" data-page="series">Séries & Filmes</a></li>
+                    <li><a href="#" class="nav-btn" data-page="games">Games</a></li>
+                    <li><a href="#" class="nav-btn" data-page="moda">Moda</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#" class="footer-link" data-info="quem-somos">Quem Somos</a></li>
+                    <li><a href="#" class="footer-link" data-info="trabalhe">Trabalhe Conosco</a></li>
+                    <li><a href="#" class="footer-link" data-info="privacidade">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Conexão Jovem. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
